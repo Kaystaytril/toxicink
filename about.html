@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Toxic Ink Tattoo Studios — About</title><meta name="description" content="Toxic Ink Tattoo Studios in Mdantsane, East London, Eastern Cape."><link rel="stylesheet" href="style.css"></head><body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Toxic Ink Tattoo Studios — About</title><meta name="description" content="Toxic Ink Tattoo Studios in Mdantsane, East London, Eastern Cape."><link rel="stylesheet" href="style.css"></head><body><div class="ink-bg" aria-hidden="true"><div class="ink-blob one"></div><div class="ink-blob two"></div><div class="ink-blob three"></div><div class="ink-ring a"></div><div class="ink-ring b"></div><span class="ink-speck s1"></span><span class="ink-speck s2"></span><span class="ink-speck s3"></span><span class="ink-speck s4"></span><span class="ink-speck s5"></span></div><div class="ink-cursor" aria-hidden="true"></div>
 <div class="topbar">TOXIC INK TATTOO STUDIOS · MDANTSANE · EAST LONDON</div>
 <header class="nav"><a href="index.html"><img class="logo" src="assets/toxic-ink-logo.png" alt="Toxic Ink Tattoo Studios"></a><button class="menu" aria-label="Menu">☰</button><nav class="navlinks"><a class="" href="index.html">HOME</a>
 <a class="active" href="about.html">ABOUT</a>
@@ -13,5 +13,9 @@
 </main>
 <footer class="footer"><a href="index.html"><img src="assets/toxic-ink-logo.png" alt="Toxic Ink Tattoo Studios"></a><p>© 2026 Toxic Ink Tattoo Studios · East London, South Africa</p><a class="small" href="https://toxicinktattoostudios.com/" target="_blank" rel="noopener">Studio website ↗</a></footer>
 <div class="container legal">Information on this demo is based on publicly available business listings and should be confirmed with Toxic Ink before publication. Portfolio placeholders are intentional until approved studio photography is supplied.</div>
-<script>const b=document.querySelector('.menu'),n=document.querySelector('.navlinks');b.addEventListener('click',()=>n.classList.toggle('open'));</script>
-</body></html>
+
+<script>
+const menuBtn=document.querySelector('.menu'),navMenu=document.querySelector('.navlinks');if(menuBtn&&navMenu)menuBtn.addEventListener('click',()=>navMenu.classList.toggle('open'));
+const revealEls=[...document.querySelectorAll('.section,.card,.service,.tile,.hours,.form,.contact-line')];revealEls.forEach(el=>el.classList.add('reveal'));const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});revealEls.forEach(el=>io.observe(el));
+const glow=document.querySelector('.ink-cursor');if(glow){window.addEventListener('mousemove',e=>{glow.style.opacity='.55';glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'});document.addEventListener('mouseleave',()=>glow.style.opacity='0')}
+</script></body></html>
